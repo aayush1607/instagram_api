@@ -104,7 +104,7 @@
     }
     ```
 5. Get all Posts by user id with pagination  
-    (If limit and page parameters are no provided then by default they will be taken as 1)  
+    (limit is the number of posts per page and page is the page number you want to visit. If limit and page parameters are not provided then by default they will be taken as 1)  
     ***Method Allowed-GET***      
     ***URL***
     ``` http://localhost:8080/posts/users/?id=61615ad9d9a12f1927083b7f&limit=2&page=1 ```  
