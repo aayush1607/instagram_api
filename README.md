@@ -5,7 +5,7 @@
 
 <span align="center">
 
-#### The task completed to develop APIs for a basic version of a Instagram.<br/>
+#### The task given by Appointy completed to develop APIs for a basic version of Instagram.<br/>
  Create an User<br/>
  Get User by Id<br/>
  Create a Post<br/>
