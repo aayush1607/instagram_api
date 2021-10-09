@@ -12,6 +12,7 @@ import (
 	"github.com/aayush1607/instagram_api/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
+	"golang.org/x/crypto/bcrypt"
 )
 
 func GetUser(w http.ResponseWriter, r *http.Request) {
@@ -68,7 +69,12 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 		ctx, _ := context.WithTimeout(context.Background(), 10*time.Second)
 		user := models.User{}
 		json.NewDecoder(r.Body).Decode(&user)
-
+		pass := []byte(user.Password)
+		hashedPassword, err := bcrypt.GenerateFromPassword(pass, bcrypt.DefaultCost)
+		if err != nil {
+			panic(err)
+		}
+		user.Password = string(hashedPassword)
 		result, err := usersCollection.InsertOne(ctx, user)
 		if err != nil {
 			w.WriteHeader(500)
