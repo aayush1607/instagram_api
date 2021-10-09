@@ -40,6 +40,7 @@
 
 ## APIs :
 1. Create an User  
+    ***Method Allowed-POST***  
      ***URL***
     ``` http://localhost:8080/users ```  
     ***JSON Request Body***
@@ -57,6 +58,7 @@
     }
     ```
 2. Get User By id  
+    ***Method Allowed-GET***      
     ***URL***
     ``` http://localhost:8080/users/?id=61617acff3b743f10bb0923a ```  
     ***JSON Response Body***
@@ -69,6 +71,7 @@
     }
     ```
 3. Create a Post  
+    ***Method Allowed-POST***       
      ***URL***
     ``` http://localhost:8080/posts ```  
     ***JSON Request Body***
@@ -87,6 +90,7 @@
     }
     ```    
 4. Get a Post by id  
+    ***Method Allowed-GET***      
     ***URL***
     ``` http://localhost:8080/posts/?id=61616540d9fbb9baedcff879 ```  
     ***JSON Response Body***
@@ -101,6 +105,7 @@
     ```
 5. Get all Posts by user id with pagination  
     (If limit and page parameters are no provided then by default they will be taken as 1)  
+    ***Method Allowed-GET***      
     ***URL***
     ``` http://localhost:8080/posts/users/?id=61615ad9d9a12f1927083b7f&limit=2&page=1 ```  
     ***JSON Response Body***
