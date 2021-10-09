@@ -14,7 +14,7 @@
 
 </span>
 
-## Setup 
+## Setup:
 #### STEP-1 : Install and Set Up MongoDB
 ```
             https://docs.mongodb.com/v5.0/installation/
